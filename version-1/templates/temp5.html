@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Radio Buttons</title>
+</head>
+<body>
+    <form id="myForm">
+        <label>
+            <input type="radio" name="radioButton" onclick="submitForm('1')">
+            <img src="../static/images/Beauty-1.png" alt="Radio Button Image 1">
+        </label>
+
+        <label>
+            <input type="radio" name="radioButton" onclick="submitForm('2')">
+            <img src="../static/images/Beauty-2.png" alt="Radio Button Image 2">
+        </label>
+
+        <label>
+            <input type="radio" name="radioButton" onclick="submitForm('3')">
+            <img src="../static/images/Beauty-3.png" alt="Radio Button Image 3">
+        </label>
+        
+    </form>
+
+    <script>
+        function submitForm(value) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify({ value: value }));
+        }
+    </script>
+</body>
+</html>

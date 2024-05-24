@@ -1,0 +1,117 @@
+<html>
+<body>
+<form id="myForm" action="/display" method="post">
+<!-- Product-Section HTML Code STARTS -->
+<div class="width-100 margin-top-50">
+  <div class="container">
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="product-img-center">
+            <label>
+              <input type="radio" name="option" value="be1" style="display: none;">
+              <img class="product-img-s" src="../static/images/Beauty-1.png" alt="1">
+            </label>
+          </div>
+          <div>
+            
+            <p class="product-name">
+              <label>
+                <input type="radio" name="option" value="be1" style="display: none;">
+                FIAMA Celebration Pack of 5 Unique Gel Bars  (4 x 125 g)
+              </label>
+            </p>
+            <p class="product-rating">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <span>(5)</span>
+            </p>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.281</span>
+              <span class="product-original-price">Rs.335</span>
+              <span class="product-discount">16%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="product-img-center">
+            <label>
+              <input type="radio" name="option" value="be2" style="display: none;">
+              <img class="product-img-s" src="../static/images/Beauty-1.png">
+            </label>
+          </div>
+          <div>
+            <p class="product-name">
+              <label>
+                <input type="radio" name="option" value="be2" style="display: none;">
+                FIAMA Celebration Pack of 5 Unique Gel Bars  (4 x 125 g)
+              </label>
+            </p>
+            <p class="product-rating">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <span>(5)</span>
+            </p>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.281</span>
+              <span class="product-original-price">Rs.335</span>
+              <span class="product-discount">16%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="width-25">
+      <div class="product-section">
+        <div class="product-border">
+          <div class="product-img-center">
+            <label>
+              <input type="radio" name="option" value="be3" style="display: none;">
+              <img class="product-img-s" src="../static/images/Beauty-1.png">
+            </label>
+          </div>
+          <div>
+            <p class="product-name">
+              <label>
+                <input type="radio" name="option" value="be3" style="display: none;">
+                FIAMA Celebration Pack of 5 Unique Gel Bars(4 x 125 g)
+              <label>
+            </p>
+            <p class="product-rating">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <span>(5)</span>
+            </p>
+            <p class="product-price">
+              <span class="product-discounted-price">Rs.281</span>
+              <span class="product-original-price">Rs.335</span>
+              <span class="product-discount">16%OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---------- Product-Section HTML Code Ends --------->
+<input type="submit" style="display: none;">
+</form>
+<script>
+    document.querySelectorAll('input[type=radio]').forEach((radio) => {
+        radio.addEventListener('change', function() {
+            document.getElementById("myForm").action = `/display/${this.value}`;
+            document.getElementById("myForm").submit();
+        });
+    });
+</script>
+</html>

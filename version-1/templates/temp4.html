@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Hide the default radio button */
+    input[type="radio"] {
+      display: none;
+    }
+
+    /* Style the label as a button with background image */
+    .radio-button-label {
+      display: inline-block;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    /* Customize the appearance of the label when the associated radio button is checked */
+    input[type="radio"]:checked + .radio-button-label {
+      background-color: #4CAF50; /* Change the background color when checked */
+      color: white; /* Change the text color when checked */
+    }
+
+    /* Style the submit button (you can customize this part) */
+    #submit-btn {
+      background-image: url('../static/images/Beauty-3.png'); /* Replace 'submit-button-image.png' with your image URL */
+      width: 100px; /* Set the width of the button */
+      height: 40px; /* Set the height of the button */
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="/" method="post">
+    <!-- Option 1 -->
+    <input type="radio" name="option" value="1" id="option1" >
+    <label for="option1" class="radio-button-label">
+      <img src="../static/images/Beauty-1.png" alt="Option 1">
+    </label>
+
+    <!-- Option 2 -->
+    <input type="radio" name="option" value="2" id="option2">
+    <label for="option2" class="radio-button-label">
+      <img src="../static/images/Beauty-2.png" alt="Option 2">
+    </label>
+
+    <!-- Add more options as needed -->
+
+    <!-- Submit button -->
+    <button type="submit" id="submit-btn" alt=""></button>
+
+  </form>
+
+</body>
+</html>

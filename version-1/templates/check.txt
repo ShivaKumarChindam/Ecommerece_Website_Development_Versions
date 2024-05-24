@@ -1,0 +1,132 @@
+can you check this flask program and make it work properly :
+
+from flask import Flask, render_template, request
+import mysql.connector
+
+app = Flask(__name__)
+
+# MySQL database configuration
+db_config = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'root',
+    'database': 'registration',
+}
+
+@app.route('/')
+def a():
+    return render_template("temp7.html")
+
+@app.route('/display', methods=['POST', 'GET'])
+def display_product():
+    try:
+        selected_option = request.form.get('option')
+        print(f"selected_option : {selected_option}")
+        id = selected_option
+        print(f"imported input from html : {id}")
+        # Connect to the database
+        connection = mysql.connector.connect(**db_config)
+        print("connected to db")
+        cursor = connection.cursor()
+        print("created cursor")
+
+        # Replace 'your_table' with the actual table name and 'your_product_id' with the specific product ID
+        query = "SELECT * FROM products WHERE id = (%s)"
+        print("query written")
+        cursor.execute(query, (id,))
+        print("cursor executed")
+
+        # Fetch one row of result
+        product = cursor.fetchone()
+        print("product fetched")
+
+        # Close the cursor
+        cursor.close()
+        print("cursor closed")
+
+        # Check if the product exists
+        if product:
+            # Pass the product details to the HTML template
+            print("we got the product")
+            print(product)
+            return render_template('single.html', product=product)
+        else:
+            print("Product not found")
+            return "Product not found"
+
+    except Exception as e:
+        return str(e)
+
+@app.route('/display/1')
+def b():
+    return render_template("single.html")
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+### flask program ends
+
+##and also check this "temp7.html" html code and make it work properly
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Radio Buttons</title>
+</head>
+<body>
+    <form id="myForm" action="/display" method="post">
+        <label>
+            <input type="radio" name="option" onclick="submitForm('1')">
+            <img src="../static/images/Beauty-1.png" alt="Radio Button Image 1">
+        </label>
+
+        <label>
+            <input type="radio" name="option" onclick="submitForm('2')">
+            <img src="../static/images/Beauty-2.png" alt="Radio Button Image 2">
+        </label>
+
+        <label>
+            <input type="radio" name="option" onclick="submitForm('3')">
+            <img src="../static/images/Beauty-3.png" alt="Radio Button Image 3">
+        </label>
+
+        <input type="submit" style="display: none;">
+    </form>
+
+    <script>
+        function submitForm(value) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/display", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify({ value: value }));
+            // Set the value of the hidden input field before submitting the form
+            //document.getElementById("myForm").action = `/display`;
+            document.getElementById("myForm").submit();
+        }
+    </script>
+</body>
+</html>
+
+##and also check this "single.html" html code and make it work properly
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+</head>
+<body>
+    <h1>Product Details</h1>
+    <p><strong>Product ID:</strong> {{ product[0] }}</p>
+    <p><strong>Product image:</strong><img src="{{ product[1] }}"</p>
+    <p><strong>Product Name:</strong> {{ product[2] }}</p>
+    <p><strong>Product Actual Price:</strong> {{ product[3] }}</p>
+    <p><strong>Product Discounted Price:</strong> {{ product[4] }}</p>
+    <p><strong>Product Discount Percentage:</strong> {{ product[5] }}</p>
+    <!-- Add other product details as needed -->
+</body>
+</html>
+
+
+### please check the above three codes and make it work properly
