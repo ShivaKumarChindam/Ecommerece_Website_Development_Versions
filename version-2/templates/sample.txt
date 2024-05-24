@@ -1,0 +1,143 @@
+# sample
+id,image_url,product_name,actual_price,discounted_price,discount_percentage
+
+10:55pm - 11:25pm = 30min
+
+<form id="myForm" action="/display" method="post">
+
+<label>
+  <input type="radio" name="option" value="w" style="display: none;">
+  <img class="product-img-s" src="../static/images/Beauty-.png">
+</label>
+
+<script>
+    document.querySelectorAll('input[type=radio]').forEach((radio) => {
+        radio.addEventListener('change', function() {
+            document.getElementById("myForm").action = `/display/${this.value}`;
+            document.getElementById("myForm").submit();
+        });
+    });
+</script>
+</html>
+
+
+be1,/static/images/Beauty-1.png,FIAMA Celebration Pack of 5 Unique Gel Bars  (4 x 125 g),335,281,16
+be2,/static/images/Beauty-2.png,Parachute Pure Coconut Hair Oil  (100 ml),37,36,2
+be3,/static/images/Beauty-3.png,Clean & Clear Foaming Face wash 480ml (480 ml),690,345,50
+be4,/static/images/Beauty-4.png,BIOTIQUE FRUIT Brightening Depigmentation & Tan Removal Face Pack  (75 g),240,163,32
+be5,/static/images/Beauty-5.png,Lakmé Peach Milk Moisturizer With Vitamin C & E for Soft Glowing Skin  (200 ml),399,255,36
+be6,/static/images/Beauty-6.png,ZM Zayn & Myza Vitamin C Day Cream SPF 15 with UVA sun protection for soft & bright skin  (50 g),449,323,28
+be7,/static/images/Beauty-7.png,Royalstar DERMA15 (25 g),299,218,27
+be8,/static/images/Beauty-8.png,St.Botanica Vitamin C E & Hyaluronic Acid Whitening & Tan Removal|No SLS/Sulphate & parabens  (50 g),899,598,33
+be9,/static/images/Beauty-9.png,Iba MUST HAVE Makeup Set (Fair)  (6 Items in the set),2895,2026,30
+be10,/static/images/Beauty-10.png,Rose Leaf Make up Kit combo(14 Items in the set),1099,439,60
+be11,/static/images/Beauty-11.png,Lady FASHION High Gloss Effect Long Lasting Nail Polish Combo  (8 Items in the set),1299,374,71
+be12,/static/images/Beauty-12.png,NPerpaa Power Stay Liquid Matte Lipstick - Waterproof,996,412,58
+bo1,/static/images/books-1.png,Software Engineering B.Tech Jntu-Hyd II-Year I-Sem & II-Sem Common To (CSE(AI & ML) CSE(IOT) And AI & ML) Latest 2023-24 Edition  (Paperback SIA Team Of Experts),189,161,14
+bo2,/static/images/books-2.png,EVELOPMENT ENGINEERING (Third Year (TY) B.Tech in Computer Engineering Artificial Intelligence and Machine Learning (AI & ML) / Artificial Intelligence and Data Science (AI & DS),200,200,0
+bo3,/static/images/books-3.png,Computer Aided Engineering Graphics for JNTU-H 22 Course (I - I - CSE/IT/EEE - ME105ES / I-II - AI&DS/AI&ML/CIVIL/ECE/MECH. - ME203ES) (Decode)  (Paperback MANOJ Y. BHOJANE RAJESH S. GORDE),395,395,0
+bo4,/static/images/books-4.png,Engineering Chemistry for JNTU-H 22 Course (I - I - CSE/IT/EEE - CH102BS / I-II - ECE/AI&DS/AI&ML/CIVIL/MECH. - CH202BS) (Decode)  (Paperback APARNA P. KULKARNI DR. MANISHA A. JAIL),195,195,0
+bo5,/static/images/books-5.png,OPERATING SYSTEMS (Second Year (SY) AI & ML Semester 4–SPPU)  (Paperback Mrs. Pallavi P. Ahire  Mrs. Priti P. Jorvekar-Kumbhar),450,450,0
+bo6,/static/images/books-6.png,FUNDAMENTALS OF ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING,250,250,0
+bo7,/static/images/books-7.png,DATABASE MANAGEMENT SYSTEM (Second Year SY Degree Artificial Intelligence & Machine Learning - AI/ML Semester 4)  (Paperback Dr. Mrs. Sheetal Gujar-Takale Sahil Shah),300,300,0
+bo8,/static/images/books-8.png,WEB DEVELOPMENT (Third Year (TY) B.Tech in Artificial Intelligence and Machine Learning (AI & ML) / Artificial Intelligence and Data Science (AI & DS) / AI - Semester 6 - DBATU),290,290,0
+bo9,/static/images/books-9.png,PROGRAMMING IN C MSBTE - K Scheme - FY DIPLOMA (SEM II - CE/CSE/IT/AI&ML/ECE/E&TC/ELEX - 312303/312009)  (Paperback A.P. Godse Dr. D. A. Godse),325,325,0
+bo10,/static/images/books-10.png,Detection of Microcalcification in Mammograms Using AI & ML Techniques  (English Paperback Jaganathan Subash Chandra Bose),6378,6378,0
+bo11,/static/images/books-11.png,Data Structures for BE Anna University R21CBCS (III-CSE - CS3301)  (Paperback Anuradha A. Puntambekar),495,495,0
+bo12,/static/images/books-12.png,Cloud Computing for BE Anna University R21CBCS (Vertical II - IT/AI&DS & Vertical III - CSE / AI&DS & Vertical II - CS&BS - CCS335)  (Paperback I.A. DHOTRE),295,295,0
+e1,/static/images/electronics-1.png,Pigeon Favourite Electric Kettle  (1.5 L Silver Black),1245,599,51
+e2,/static/images/electronics-2.png,NOVA NHP 8100/05 Hair Dryer  (1200 W Black Blue),845,499,40
+e3,/static/images/electronics-3.png,NOVA NHT 1041 USB Trimmer 60 min Runtime 5 Length Settings  (Black),899,499,44
+e4,/static/images/electronics-4.png,mi star water proof copper blue 2000 2000 W Shock Proof Immersion Heater Rod  (water),1000,404,59
+e5,/static/images/electronics-5.png,Spinxx 35+2 MFD Tibcon Capacitor 440V for (1.5 Ton & 2 Ton) Air Conditioner Motor Control Electronic Hobby Kit,999,398,60
+e6,/static/images/electronics-6.png,Smartivity Robotic Mechanical Hand STEM DIY Fun Toys,1249,986,21
+e7,/static/images/electronics-7.png,Mi 3i 20000 mAh Power Bank (Fast Charging 18W)  (Black Lithium Polymer),2199,1979,10
+e8,/static/images/electronics-8.png,Fire-Boltt Hurricane 1.3" Curved Glass Display with 360 Health Training 100+ Sports Modes Smartwatch  (Black Strap Free Size,8999,1499,83
+e9,/static/images/electronics-9.png,KiloMaxx KM-06 100Kg Weighing Scale With Double Green Display (12 * 12" Steel) Weighing Scale  (Steel),9999,3969,60
+e10,/static/images/electronics-10.png,HP Victus AMD Ryzen 7 Octa Core 7840HS - (16 GB/512 GB SSD/Windows 11 Home/6 GB Graphics/NVIDIA GeForce RTX 3050),96136,82188,14
+e11,/static/images/electronics-11.png,HP x206C USB 3.2 TYPE C 128 GB OTG Drive  (Silver Type A to Type C),2400,1689,29
+e12,/static/images/electronics-12.png,RPM Euro Games Rechargeable - 500 mAh Battery Backlit RGB Wireless Optical Gaming Mouse  (2.4GHz Wireless Black),1490,641,56
+f1,/static/images/fashion-1.png,Men Regular Fit Solid Button Down Collar Casual Shirt,3399,611,82
+f2,/static/images/fashion-2.png,Men Solid Polo Neck Cotton Blend Light Blue,1499,279,81
+f3,/static/images/fashion-3.png,Men Regular Fit Checkered Spread Collar Casual Shirt,1999,299,85
+f4,/static/images/fashion-4.png,Pack of 4 Men Solid Round Neck Polyester Silver Blue Black Grey T-Shirt,1499,349,76
+f5,/static/images/fashion-5.png,Men Regular Fit Solid Spread Collar Casual Shirt,1499,389,74
+f6,/static/images/fashion-6.png,Men Regular Fit Washed Cut Away Collar Casual Shirt,1699,459,72
+f7,/static/images/fashion-7.png,Men Printed Hooded Neck Cotton Blend Black T-Shirt,1519,329,78
+f8,/static/images/fashion-8.png,Men Regular Fit Solid Spread Collar Casual Shirt,1999,359,82
+f9,/static/images/fashion-9.png,Men Regular Fit Printed Spread Collar Casual Shirt,999,289,71
+f10,/static/images/fashion-10.png,Men Slim Fit Striped Spread Collar Casual Shirt,1899,379,80
+f11,/static/images/fashion-11.png,Men Printed Typography Round Neck Cotton Blend Black T-Shirt,1299,220,83
+f12,/static/images/fashion-12.png,Men Striped Round Neck Cotton Blend Red & White T-Shirt,1299,299,76
+g1,/static/images/grocery-1.png,Nutraj Round Kishmish Raisins  (500 g),299,199,33
+g2,/static/images/grocery-2.png,41 foods Dry fruits combo pack of Healthy,2099,988,52
+g3,/static/images/grocery-3.png,Tulsi California Rozana Value Almonds  (1 kg),1140,599,47
+g4,/static/images/grocery-4.png,Happilo Premium Natural Whole Kaju/ Cashews  (500 g),775,541,30
+g5,/static/images/grocery-5.png,GKD's Premium Pure Coconut Oil Jar  (1 L),380,290,23
+g6,/static/images/grocery-6.png,Fortune Xpert Pro Sugar Conscious Sesame Oil Pouch  (4 x 1 L),796,500,37
+g7,/static/images/grocery-7.png,Tata Premium Tea Pouch  (1.5 kg),705,578,18
+g8,/static/images/grocery-8.png,Manna Black Dates - 800g (400g x 2 Packs) | Rich in Iron Fibre & Vitamins Dry Dates Dry Dates  (2 x 400 g),780,339,56
+g9,/static/images/grocery-9.png,Fortune Sunlite Refined Sunflower Oil Can  (5 L),1050,1050,0
+g10,/static/images/grocery-10.png,Saffola Rolled Oats Creamy 100% Natural High Protein & Fibre Healthy Cereal Pouch  (1 kg),235,192,18
+g11,/static/images/grocery-11.png,NutroVally for Weight Loss with Omega 3  Zinc and Fiber Calcium Rich Chia Seeds Chia Seeds  (400 g Pack of 2),598,246,58
+g12,/static/images/grocery-12.png,Tulsi California Best Quality Vaccum Pack Select Walnuts  (200 g),400,239,40
+hf1,/static/images/home&furniture-1.png,Chhogli Microfiber Bathroom Mat  (Gray Medium),1228,189,84
+hf2,/static/images/home&furniture-2.png,iVBOX Eco-Plus Non-Stick Appam Maker,950,449,52
+hf3,/static/images/home&furniture-3.png,NIRLON Base Handi Inner Lid 3 L Induction Pressure Cooker,3399,999,70
+hf4,/static/images/home&furniture-4.png,Vruta Leather Grip Coffee Cup Tumbler,999,249,75
+hf5,/static/images/home&furniture-5.png,Cilox TAKAROA 500 ml Flask,1022,337,67
+hf6,/static/images/home&furniture-6.png,Jordyblue Marvin 3R Rocking Revolving Rocker,49999,16999,66
+hf7,/static/images/home&furniture-7.png,spinecure mattress Box Type Cotton,3199,1359,57
+hf8,/static/images/home&furniture-8.png,Flipkart Perfect Homes Kallos Metal 4 Seater Dining Set,27999,13999,50
+hf9,/static/images/home&furniture-9.png,baybee Plastic Baby Chair for Kids Study Table Chair with Cushion Seat & High Backrest Plastic Chair  (Finish Color - Green DIY(Do-It-Yourself)),2299,1079,53
+hf10,/static/images/home&furniture-10.png,Qubo HLM03 Smart Door Lock,1990,7990,60
+hf11,/static/images/home&furniture-11.png,Keekos PP Collapsible Wardrobe  (Finish Color - BLACK-12 DIY(Do-It-Yourself)),7999,2944,63
+hf12,/static/images/home&furniture-12.png,Habitat Green Plastic Polypropylene Area Rug  (1 ft X 4 ft Rectangle),1049,110,89
+me1,/static/images/medicine-1.png,Dabur Chyawanprakash Sugarfree 900g,440,316,28
+me2,/static/images/medicine-2.png,BOROPLUS Antiseptic Cream (120 ml),200,138,31
+me3,/static/images/medicine-3.png,ZANDU Chyavanprash Avaleha Jaggery (Gur)900g,325,178,45
+me4,/static/images/medicine-4.png,Dettol Effective Protection Antiseptic Liquid  (60 ml),36,33,8
+me5,/static/images/medicine-5.png,MOOV Fast Pain Relief Spray  (35 g),169,127,24
+me6,/static/images/medicine-6.png,ZANDU Balm Special Offer pack Balm  (50 ml),175,117,33
+me7,/static/images/medicine-7.png,Baidyanath Chyawan-Fit Sugar free 1Kg,415,299,27
+me8,/static/images/medicine-8.png,Kapiva Wild Amla Juice | For Hair Health | Made with Cold Pressed Amla,299,249,16
+me9,/static/images/medicine-9.png,Vuvixo Himalayan Shilajit Resin for Performance,999,449,55
+me10,/static/images/medicine-10.png,GuruPrasadam 51_care,360,324,10
+me11,/static/images/medicine-11.png,Dr. Ortho Relief-Pain Massage Oil Liquid  (120 ml),295,265,10
+me12,/static/images/medicine-12.png,mushroomex Mushroom Poweder (Ayurvedic Weight Gainer 100 GM),360,347,3
+mo1,/static/images/mobiles-1.png,OPPO Reno 11 Pro 5G (Pearl White 256 GB)  (12 GB RAM),44999,39999,11
+mo2,/static/images/mobiles-2.png,MOTOROLA g54 5G (Pearl Blue 128 GB)  (8 GB RAM),17999,13999,22
+mo3,/static/images/mobiles-3.png,vivo T2x 5G (Aurora Gold 128 GB)  (8 GB RAM),20999,14999,28
+mo4,/static/images/mobiles-4.png,MOTOROLA g54 5G (Midnight Blue 128 GB)  (8 GB RAM),17999,13999,22
+mo5,/static/images/mobiles-5.png,POCO C55 (Forest Green 64 GB)  (4 GB RAM),11999,6499,45
+mo6,/static/images/mobiles-6.png,APPLE iPhone 15 (Blue 128 GB),79900,65999,17
+mo7,/static/images/mobiles-7.png,OPPO Reno 11 Pro 5G (Pearl White 256 GB)  (12 GB RAM),44999,39999,11
+mo8,/static/images/mobiles-8.png,Infinix SMART 8 HD (Crystal Green 64 GB)  (3 GB RAM),7999,6299,21
+mo9,/static/images/mobiles-9.png,REDMI 12 (Pastel Blue 128 GB)  (6 GB RAM),15999,10499,34
+mo10,/static/images/mobiles-10.png,OnePlus Nord CE 3 Lite 5G (Chromatic Gray 256 GB)  (8 GB RAM),21999,21247,3
+mo11,/static/images/mobiles-11.png,REDMI 12 (Jade Black 128 GB)  (6 GB RAM),15999,10499,34
+mo12,/static/images/mobiles-12.png,Nokia 105 Single SIM| Keypad Mobile Phone with Wireless FM Radio  (Cyan),1599,1269,20
+t1,/static/images/toys-1.png,KZED Kids Dancing Talking Cactus Toys for Baby Boys and Girls,1999,499,75
+t2,/static/images/toys-2.png,Mummas Kidz 360° Rotate Transparent Electronic Car,999,190,80
+t3,/static/images/toys-3.png,Calandis Foam RC Plane DIY Flight Toys Fixed Wing 2 Channel,11299,5965,47
+t4,/static/images/toys-4.png,Galactic New Rabbit Phone Smart Phone Cordless Feature Mobile Phone Toys,499,243,51
+t5,/static/images/toys-5.png,Parteet Premium Quality Musical Electronic Phone with Music,399,269,32
+t6,/static/images/toys-6.png,GoodsNet Flash Drum Toy with 5 Visual 3D Lights,999,279,72
+t7,/static/images/toys-7.png,Aarohi Collections Go Go Fishing Electric Rotating Magnetic Fish Catching,1346,696,48
+t8,/static/images/toys-8.png,NHI Battery Operated Train Toy Track Set for Kids with Sound,3999,940,76
+t9,/static/images/toys-9.png,MARUDHARA ENTERPRISES MUSICAL MINI D.J. (WITH LIGHTING) FOR KIDS|PICK-UP D.J.  (Yellow| White| Multicolor),1499,759,49
+t10,/static/images/toys-10.png,Toys N Smile Musical Elephant Piano with 4 Modes| Wonderful Animal Sound Toy for Kids| Baby  (Multicolor),799,519,35
+t11,/static/images/toys-11.png,Dcare Combat Tank Transform Robot Toy with Light & Music Automatic Transforming Robot Tank Toy for Kids with Bump Function (Combat Tank)  (Multicolor),746,483,35
+t12,/static/images/toys-12.png,SALEOFF Dancing Robot Musical Toy With Flashing Lights & Sounds For Kids83  (Multicolor),999,599,40
+w1,/static/images/walldecors-1.png,jai shree shyam collection Key Holder Stand Wooden for Home Wall| Office,499,168,66
+w2,/static/images/walldecors-2.png,ArtfulCrafts (Number of Shelves - 5 Brown) Wood Wall Shelf  (Number of Shelves - 5| Brown),1599,692,56
+w3,/static/images/walldecors-3.png,Xtenshion Crafts Wooden Wall Mount Tv Set Up Box Stand Wall Shelves Wooden Wall Shelf  (Number of Shelves - 2| Brown),803,264,67
+w4,/static/images/walldecors-4.png,kitchfluent Jewelry Organizer Hook Stand Display Holder and Organizer for Earring/Bracelet Plastic Key Holder  (12 Hooks| Black),699,249,64
+w5,/static/images/walldecors-5.png,RAKANO Macrame Wall Shelf Pure Cotton Cord Pine Wooden Hanging Floating,1599,299,81
+w6,/static/images/walldecors-6.png,Khatu Crafts Wooden Decorative Wooden Wall Hanging for Home Decor,999,189,81
+w7,/static/images/walldecors-7.png,Artvibes Designer Wooden Wall Hanging Decoration Items,839,209,75
+w8,/static/images/walldecors-8.png,Zeneric Subh Particle Board Wall Shelf  (Number of Shelves - 2| White),300,200,33
+w9,/static/images/walldecors-9.png,Decorhand Iron| Wooden Wall Shelf  (Number of Shelves - 3| Brown),2499,1099,56
+w10,/static/images/walldecors-10.png,Fivean Wall Mount Router Stand Set top Box Stand Setup Box Shelves Remote Holder Plastic Wall Shelf  (Number of Shelves - 1| Black),499,181,63
+w11,/static/images/walldecors-11.png,Branco Strong and Heavy Bathroom Mirror Cabinet Pride New Look (Ivory) Plastic Wall Shelf  (Number of Shelves - 5| Beige),6499,2099,67
+w12,/static/images/walldecors-12.png,VAH Black Book Wall Shelf Wooden Wall Shelf  (Number of Shelves - 1| Black),1999,266,86

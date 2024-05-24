@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart Page</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.product {
+    text-align: center;
+    margin: 20px;
+}
+
+#cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-left: 1px solid #ddd;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#cart h2 {
+    text-align: center;
+}
+
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cartItems li {
+    margin-bottom: 10px;
+}
+</style>
+
+</head>
+
+<body>
+    <div class="product-list">
+        {% for product in products %}
+            <div class="product">
+                <img src="product_image.jpg" alt="Product Image">
+                <h2>{{ product['name'] }}</h2>
+                <p>Price: ${{ product['price'] }}</p>
+                <button onclick="addToCart({{ product['id'] }})">Add to Cart</button>
+                <button onclick="removeFromCart({{ product['id'] }})">Remove from Cart</button>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems"></ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+<script>
+function addToCart(productId) {
+    fetch('/add_to_cart', {
+        method: 'POST',
+        body: new URLSearchParams({ 'product_id': productId }),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            updateCart();
+        } else {
+            console.error(data.message);
+        }
+    });
+}
+
+function removeFromCart(productId) {
+    fetch('/remove_from_cart', {
+        method: 'POST',
+        body: new URLSearchParams({ 'product_id': productId }),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            updateCart();
+        } else {
+            console.error(data.message);
+        }
+    });
+}
+
+function updateCart() {
+    const cartItemsList = document.getElementById("cartItems");
+    cartItemsList.innerHTML = "";
+
+    fetch('/get_cart_items')
+    .then(response => response.json())
+    .then(cartItems => {
+        cartItems.forEach(item => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            cartItemsList.appendChild(listItem);
+        });
+    });
+}
+</script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #cart {
+            width: 70%;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total {
+            text-align: right;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cart">
+        <h1>Shopping Cart</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Product rows will go here -->
+            </tbody>
+            <tfoot>
+                <tr class="total">
+                    <td colspan="3">Total:</td>
+                    <td id="cart-total">0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <script>
+        // You can add JavaScript functions for handling the cart logic here
+        function checkout() {
+            alert("Implement your checkout logic here!");
+        }
+    </script>
+
+</body>
+</html>
