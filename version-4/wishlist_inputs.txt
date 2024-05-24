@@ -1,0 +1,9 @@
+shiva@gmail.com,be1,/static/images/Beauty-1.png,FIAMA Celebration Pack of 5 Unique Gel Bars  (4 x 125 g),335,281,16
+shiva@gmail.com,be2,/static/images/Beauty-2.png,Parachute Pure Coconut Hair Oil  (100 ml),37,36,2
+shiva@gmail.com,be3,/static/images/Beauty-3.png,Clean & Clear Foaming Face wash 480ml (480 ml),690,345,50
+kumar@gmail.com,be1,/static/images/Beauty-1.png,FIAMA Celebration Pack of 5 Unique Gel Bars  (4 x 125 g),335,281,16
+kumar@gmail.com,be2,/static/images/Beauty-2.png,Parachute Pure Coconut Hair Oil  (100 ml),37,36,2
+kumar@gmail.com,be3,/static/images/Beauty-3.png,Clean & Clear Foaming Face wash 480ml (480 ml),690,345,50
+sai@gmail.com,be1,/static/images/Beauty-1.png,FIAMA Celebration Pack of 5 Unique Gel Bars  (4 x 125 g),335,281,16
+sai@gmail.com,be2,/static/images/Beauty-2.png,Parachute Pure Coconut Hair Oil  (100 ml),37,36,2
+sai@gmail.com,be3,/static/images/Beauty-3.png,Clean & Clear Foaming Face wash 480ml (480 ml),690,345,50
