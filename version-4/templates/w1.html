@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISHLIST</title>
+</head>
+<body>
+    <h1>Product Details</h1>
+    <table border="1">
+        <tr>
+            <th>Email id</th>
+            <th>Product Id</th>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Actual Price</th>
+            <th>Discounted Price</th>
+            <th>Discount Percentage</th>
+            <th>function</th>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.email }}</td>
+                <td>{{ product.id }}</td>
+                <td><img src="{{ product.image_url }}"" height="50"></td>
+                <td>{{ product.product_name }}</td>
+                <td>{{ product.actual_price }}</td>
+                <td>{{ product.discounted_price }}</td>
+                <td>{{ product.discount_percentage }}</td>
+                <td><a href="/delete">Remove</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
